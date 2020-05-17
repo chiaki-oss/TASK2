@@ -1,0 +1,16 @@
+main{
+	margin: 24px 33px;
+}
+
+h1{
+	font-size: 26px;
+}
+
+p{
+	font-size: 13px;
+	text-indent: 2.5em;
+	line-height: 10px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+

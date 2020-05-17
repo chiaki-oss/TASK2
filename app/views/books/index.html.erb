@@ -1,0 +1,37 @@
+<main>
+	<h2 class="headline">Books</h2>
+	
+	<table>
+		<tr>
+			<th class="record">Title</th>
+			<th class="record">Body</th>
+		</tr>
+		<% @books.each do |book| %>
+		<tr>
+			<th class="title"><%= book.title %></th>
+			<th class="body"><%= book.body %></th>
+			<th class="button"><%= link_to "Show", book %>
+			</th>
+			<th class="button"><%= link_to "Edit", edit_book_path(book) %>
+			</th>
+			<th class="button"><%= link_to "Destroy", book_path(book), method: :delete %>
+			</th>
+		</tr>
+		<% end %>
+	</table>
+
+	<h3>New book</h3>
+	<%= form_for(@book) do |f| %>
+	
+	<h5>Title</h5>
+	<%= f.text_field :title %>
+
+	<h5>Body</h5>
+	<%= f.text_area :body %>
+
+	<p><%= f.submit 'Create Book' %></p>
+
+	<% end %>
+</main>
+
+
