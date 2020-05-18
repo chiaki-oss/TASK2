@@ -1,10 +1,14 @@
 <main>
-	<p>Title:<span> <%= @book.title %></span></p>
-	<p>Body:<span><%= @book.title %></span></p>
-</main>
+	<p>Book was successfully created.</p>
+	<p>
+		<strong>Title:</strong><%= @book.title %>
+	</p>
+	<p>
+		<strong>Body:</strong><%= @book.body %>
+	</p>
 
-<footer>
 	<%= link_to "Edit", edit_book_path(@book) %>|
 	<%= link_to "Back", books_path %>
-</footer>
+</main>
+
 
