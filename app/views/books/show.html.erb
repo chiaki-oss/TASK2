@@ -1,5 +1,10 @@
 <main>
-	<p>Book was successfully created.</p>
+	<%= flash[:complete] %>
+	<p id="notice"><%= notice %></p>
+	<%= flash[:success] %>
+	<p id="notice"><%= notice %></p>
+	<%= flash[:faile] %>
+	<p id="notice"><%= notice %></p>
 	<p>
 		<strong>Title:</strong><%= @book.title %>
 	</p>
