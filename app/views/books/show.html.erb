@@ -1,14 +1,21 @@
+<%= stylesheet_link_tag "show" %>
 <main>
-	<p>Book was successfully created.</p>
-	<p>
-		<strong>Title:</strong><%= @book.title %>
+	<!-- 投稿完了 -->
+	<%= flash[:complete] %>
+	<p class="notice"><%= notice %></p>
+	<!-- 更新完了 -->
+	<%= flash[:success] %>
+	<p class="notice"><%= notice %></p>
+
+	<p class="body">
+		<strong>Title:</strong> <%= @book.title %>
 	</p>
-	<p>
-		<strong>Body:</strong><%= @book.body %>
+	<p class="body">
+		<strong>Body:</strong> <%= @book.body %>
 	</p>
 
-	<%= link_to "Edit", edit_book_path(@book) %>|
-	<%= link_to "Back", books_path %>
+	<p class=link><%= link_to "Edit", edit_book_path(@book) %> |
+	<%= link_to "Back", books_path %></p>
 </main>
 
 
